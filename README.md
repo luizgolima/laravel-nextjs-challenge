@@ -100,9 +100,11 @@ docker ps
 docker exec -it task-manager-backend-1 bash 
 ```
 
-3. Agora você está dentro do contêiner do serviço "backend". Execute `ls` para listar os arquivos e verifique se você está no diretório correto.
+3. Em seguida, execute o comando `php artisan migrate` para executar as migrações do Laravel dentro do contêiner.
 
-4. Em seguida, execute o comando `php artisan migrate` para executar as migrações do Laravel dentro do contêiner.
+```
+php artisan migrate
+```
 
 ## Uso
 
