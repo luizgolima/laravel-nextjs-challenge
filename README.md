@@ -97,3 +97,8 @@ docker-compose up -d
 
 6. Todas as alterações nas tarefas são sincronizadas com o banco de dados MySQL.
 
+## Licença
+
+Este projeto foi criado por [Luiz Lima](https://github.com/luizgolima) e licenciado sob a [Licença MIT](LICENSE).
+
+
