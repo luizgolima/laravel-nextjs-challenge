@@ -77,28 +77,23 @@ docker-compose up -d
 
 4. Aguarde até que os contêineres sejam criados e os serviços estejam em execução.
 
-5. Após a criação dos contêineres, o frontend será exposto na porta `http://localhost:3000` e o backend na `http://localhost:8000`.
+6. Após a criação dos contêineres, o frontend será exposto na porta `http://localhost:3000` e o backend na `http://localhost:8000`.
 
-6. Vá até a pasta `backend` e rode o comando `php artisan migrate` para realizar as migrações para o banco de dados:
+## Executando Migrações
 
-## Possível erro
+Para realizar a migração dos dados do backend para o banco de dados, é necessário executar o comando `php artisan migrate` dentro do container do serviço "backend". A seguir, estão os passos para realizar essa tarefa:
 
-Durante a execução do comando `php artisan migrate`, pode ocorrer o erro `SQLSTATE[HY000] [2002]`, indicando uma falha na conexão com o banco de dados. Para resolver esse problema, após iniciar os contêineres, é necessário acessar o contêiner do serviço `backend` e executar o comando `php artisan migrate`. Siga o passo a passo a seguir para solucionar esse problema:
-
-1. Execute o comando docker ps para listar os contêineres em execução e identifique o nome do contêiner associado ao serviço "backend".
-
+1. Primeiro, abra o terminal e execute o comando `docker ps` para listar os contêineres em execução. Observe o nome do contêiner associado ao serviço "backend".
 ```
 docker ps
 ```
 
-2. Agora, execute o comando `docker exec -it <nome_do_contêiner> bash`, substituindo `<nome_do_contêiner>` pelo nome do contêiner do serviço "backend". Exemplo:
-
+2. Com o nome do contêiner em mãos, execute o comando `docker exec -it <nome_do_contêiner> bash`, substituindo `<nome_do_contêiner>` pelo nome do contêiner do serviço "backend". Veja o exemplo abaixo:
 ```
 docker exec -it task-manager-backend-1 bash 
 ```
 
-3. Em seguida, execute o comando `php artisan migrate` para executar as migrações do Laravel dentro do contêiner.
-
+3. Isso permitirá que você entre no container do backend. Agora, execute o comando `php artisan migrate` para realizar as migrações do Laravel dentro do contêiner.
 ```
 php artisan migrate
 ```
