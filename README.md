@@ -45,6 +45,7 @@ DB_DATABASE=database
 DB_USERNAME=admin
 DB_PASSWORD=root
 ```
+
 Já no `frontend`, será necessário criar um arquivo `.env.local` contendo as seguintes informações:
 
 ```bash
@@ -79,10 +80,6 @@ docker-compose up -d
 5. Após a criação dos contêineres, o frontend será exposto na porta `http://localhost:3000` e o backend na `http://localhost:8000`.
 
 6. Vá até a pasta `backend` e rode o comando `php artisan migrate` para realizar as migrações para o banco de dados:
-
-```bash
-cd backend && php artisan migrate
-```
 
 ## Possível erro
 
