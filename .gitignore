@@ -1,0 +1,54 @@
+# Ignorar diretórios de dependências geradas
+/node_modules
+
+# Ignorar arquivos de build do Laravel
+/public/build
+
+# Ignorar diretório de cache do Laravel
+/bootstrap/cache
+
+# Ignorar arquivos de configuração do ambiente local do Laravel
+.env
+
+# Ignorar diretório de build do Next.js
+/.next
+
+# Ignorar diretório de dependências do Next.js
+/node_modules
+
+# Ignorar arquivo de cache do Next.js
+/.next-cache
+
+# Ignorar arquivos de build do Next.js
+/out
+
+# Ignorar arquivos de configuração do ambiente local do Next.js
+.env.local
+
+# Ignorar arquivos de log e cache do Next.js
+.next/
+.next.config.js
+
+# Ignorar arquivos de log do Laravel
+/storage/logs
+
+# Ignorar arquivos de cache do Laravel
+/storage/framework/cache
+
+# Ignorar diretório de sessões do Laravel
+/storage/framework/sessions
+
+# Ignorar arquivos de upload temporários do Laravel
+/storage/framework/testing
+
+# Ignorar diretório de views compiladas do Laravel
+/storage/framework/views
+
+# Ignorar arquivos de backup do Laravel
+*.sql
+
+# Ignorar arquivos de configuração de ambiente do Laravel
+/.env.*.php
+
+# Ignorar arquivos de configuração do Docker Compose
+docker-compose.override.yml
