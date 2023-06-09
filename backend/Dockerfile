@@ -19,9 +19,6 @@ RUN php artisan key:generate
 # Instala o driver do MySQL
 RUN docker-php-ext-install pdo pdo_mysql
 
-# # Executa as migrações do banco de dados
-# RUN ./vendor/bin/sail up -d
-
 # Expõe a porta do servidor de desenvolvimento
 EXPOSE 8000
 
