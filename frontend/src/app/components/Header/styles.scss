@@ -23,6 +23,41 @@ header {
     ul {
       display: flex;
       gap: 1rem;
+
+      .login {
+        position: relative;
+
+        &:hover {
+          .login-cadastro {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            height: 80px;
+            width: 140px;
+            background-color: #f8f9fa;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+            right: 1px;
+            top: 24px;
+            border-radius: 5px;
+
+            li {
+              text-indent: 1rem;
+              height: 100%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+
+              a {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        .login-cadastro {
+          display: none;
+        }
+      }
     }
   }
 }

@@ -26,8 +26,16 @@ export default function Header() {
           <li>
             <a href='/'>Contato</a>
           </li>
-          <li>
+          <li className='login'>
             <a href='/'>Login</a>
+            <ul className='login-cadastro'>
+              <li className='border-bottom'>
+                <a href=''>Login</a>
+              </li>
+              <li>
+                <a href=''>Cadastro</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
