@@ -9,10 +9,13 @@ COPY package*.json ./
 COPY . .
 
 # Instala as dependências do projeto
-RUN npm install
+RUN npm ci --only=production
 
-# Expõe a porta do servidor de desenvolvimento
-EXPOSE 3000
+# Constrói a aplicação Next.js
+RUN npm run build
 
-# Comando para iniciar o servidor de desenvolvimento
-CMD ["npm", "run", "dev"]
+# Expõe a porta do servidor de produção (se necessário)
+# EXPOSE 3000
+
+# Comando para iniciar o servidor de produção
+CMD ["npm", "start"]
