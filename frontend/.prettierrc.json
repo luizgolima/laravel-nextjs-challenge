@@ -2,9 +2,26 @@
   "semi": true,
   "trailingComma": "all",
   "singleQuote": true,
-  "jsxSingleQuote": true,
   "printWidth": 80,
   "tabWidth": 2,
+  "jsxSingleQuote": false,
+  "jsxBracketSameLine": false,
   "arrowParens": "avoid",
-  "endOfLine": "auto"
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": "*.tsx",
+      "options": {
+        "parser": "typescript",
+        "jsxSingleQuote": true,
+        "jsxBracketSameLine": true
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss"
+      }
+    }
+  ]
 }
