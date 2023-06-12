@@ -1,0 +1,42 @@
+.main {
+  height: 800px;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+
+  div:first-child {
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      width: 480px;
+    }
+
+    button {
+      color: #f8f9fa;
+      height: 50px;
+      width: 200px;
+      text-align: center;
+      background-color: #15e823;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #0d9e1a;
+      }
+    }
+  }
+}
