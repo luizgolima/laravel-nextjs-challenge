@@ -8,7 +8,7 @@
 /bootstrap/cache
 
 # Ignorar arquivos de configuração do ambiente local do Laravel
-.env
+.env.local
 
 # Ignorar diretório de build do Next.js
 /.next
