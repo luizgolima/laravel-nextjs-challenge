@@ -52,3 +52,6 @@
 
 # Ignorar arquivos de configuração do Docker Compose
 docker-compose.override.yml
+
+# Ignorar arquivo oculto gerado pelo sistema operacional macOS
+.DS_Store
