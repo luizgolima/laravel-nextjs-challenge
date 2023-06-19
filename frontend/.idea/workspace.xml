@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c5484a2-c5e3-4152-b422-b8ec7a62fe91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/homeimg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Header/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +47,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/luizlima/Developer/task-manager/frontend",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/luizlima/Developer/full-stack-task-manager/frontend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -64,7 +59,7 @@
     "prettierjs.PrettierConfiguration.Package": "/Users/luizlima/Developer/task-manager/frontend/node_modules/prettier",
     "rearrange.code.on.save": "true",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Users/luizlima/Developer/task-manager/frontend/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/luizlima/Developer/full-stack-task-manager/frontend/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -110,6 +105,7 @@
       <workItem from="1686350414477" duration="1000" />
       <workItem from="1686582790397" duration="1181000" />
       <workItem from="1686583993216" duration="10438000" />
+      <workItem from="1687181100877" duration="105000" />
     </task>
     <servers />
   </component>
