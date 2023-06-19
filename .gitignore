@@ -55,3 +55,7 @@ docker-compose.override.yml
 
 # Ignorar arquivo oculto gerado pelo sistema operacional macOS
 .DS_Store
+
+# Ignorar arquivos de configuração do WebStorm
+.idea/
+
