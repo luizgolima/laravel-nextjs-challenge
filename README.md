@@ -1,12 +1,12 @@
 # Task Manager
 
-O Task Manager é uma aplicação web que oferece um controle de tarefas (todo list) personalizado para cada usuário. A estrutura do projeto consiste em um mono repositório com duas partes: o frontend, desenvolvido com Next.js, e o backend, desenvolvido com Laravel. O banco de dados MySQL é utilizado para armazenar as tarefas.
+Task Manager is a web application that provides personalized task management (to-do list) for each user. The project structure consists of a monorepo with two parts: the frontend, developed with Next.js, and the backend, developed with Laravel. MySQL database is used to store the tasks.
 
-## Visão geral do projeto
+## Project Overview
 
-O Task Manager é uma aplicação web que permite aos usuários criar uma conta para terem um ambiente único e personalizado para gerenciar suas tarefas. Com ele, é possível criar, atualizar, editar e excluir cada tarefa de forma intuitiva.
+Task Manager is a web application that allows users to create an account to have a unique and personalized environment for managing their tasks. With it, users can create, update, edit, and delete each task in an intuitive way.
 
-## Tecnologias utilizadas
+## Technologies Used
 
 - Next.js
 - Laravel
@@ -14,28 +14,28 @@ O Task Manager é uma aplicação web que permite aos usuários criar uma conta 
 - Docker
 - Docker Compose
 
-## Requisitos
+## Requirements
 
-Antes de começar, certifique-se de ter os seguintes requisitos instalados em seu ambiente de desenvolvimento:
+Before getting started, make sure you have the following requirements installed in your development environment:
 
 - Node.js
 - PHP
 - Docker
 - Docker Compose
 
-## Configuração
+## Configuration
 
-O projeto é composto por três serviços no arquivo docker-compose.yml:
+The project consists of three services in the docker-compose.yml file:
 
-- `frontend`: contém o código do cliente desenvolvido com Next.js, executado na porta 3000.
-- `backend`: contém o código do servidor desenvolvido com Laravel, executado na porta 8000.
-- `database`: contém o banco de dados MySQL, executado na porta 3306.
+- `frontend`: contains the client-side code developed with Next.js, running on port 3000.
+- `backend`: contains the server-side code developed with Laravel, running on port 8000.
+- `database`: contains the MySQL database, running on port 3306.
 
-Certifique-se de que as portas 3000, 8000 e 3306 estejam disponíveis em sua máquina local antes de executar o aplicativo.
+Make sure that ports 3000, 8000, and 3306 are available on your local machine before running the application.
 
-## Arquivos .env
+## .env Files
 
-No `backend`, será necessário criar um arquivo `.env` para garantir a conexão com o banco de dados MySQL.
+In the `backend`, you will need to create a `.env` file to ensure the connection with the MySQL database.
 
 ```bash
 DB_CONNECTION=mysql
@@ -46,79 +46,82 @@ DB_USERNAME=admin
 DB_PASSWORD=root
 ```
 
-Já no `frontend`, será necessário criar um arquivo `.env.local` contendo as seguintes informações:
+In the `frontend`, you will need to create a `.env.local` file containing the following information:
 
 ```bash
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
-Certifique-se de configurar corretamente as variáveis de ambiente. No backend, as configurações são necessárias para estabelecer a conexão com o MySQL, enquanto no frontend, elas garantem a conexão com o backend.
+Make sure to configure the environment variables correctly. In the backend, the settings are necessary to establish the connection with MySQL, while in the frontend, they ensure the connection with the backend.
 
 
-## Instalação
+## Installation
 
-1. Clone o repositório do projeto:
-
-```bash
-git clone https://github.com/luizgolima/task-manager.git
-```
-
-2. Navegue até o diretório clonado:
+1. Clone the project repository:
 
 ```bash
-cd task-manager
+git clone https://github.com/luizgolima/full-stack-task-manager.git
 ```
 
-3. Execute o comando o seguinte comando para construir e iniciar os contêineres Docker definidos no arquivo `docker-compose.yml`.
+2. Navigate to the cloned directory:
+
+```bash
+cd full-stack-task-manager
+```
+
+3. Run the following command to build and start the Docker containers defined in the `docker-compose.yml` file:
 
 ```bash
 docker-compose up -d
 ```
 
-4. Aguarde até que os contêineres sejam criados e os serviços estejam em execução.
+4. Wait until the containers are created, and the services are up and running.
 
-6. Após a criação dos contêineres, o frontend será exposto na porta `http://localhost:3000` e o backend na `http://localhost:8000`.
+6. After the containers are created, the frontend will be accessible at `http://localhost:3000`, and the backend at `http://localhost:8000`.
 
-## Executando Migrações
+## Running Migrations
 
-Para realizar a migração dos dados do backend para o banco de dados, é necessário executar o comando `php artisan migrate` dentro do container do serviço "backend". A seguir, estão os passos para realizar essa tarefa:
+To migrate the backend data to the database, you need to run the `php artisan migrate` command inside the "backend" service container. Here are the steps to perform this task:
 
-1. Primeiro, abra o terminal e execute o comando `docker ps` para listar os contêineres em execução. Observe o nome do contêiner associado ao serviço "backend".
-```
+1. First, open the terminal and run the `docker ps` command to list the running containers. Take note of the container name associated with the "backend" service.
+
+```bash
 docker ps
 ```
 
-2. Com o nome do contêiner em mãos, execute o comando `docker exec -it <nome_do_contêiner> bash`, substituindo `<nome_do_contêiner>` pelo nome do contêiner do serviço "backend". Veja o exemplo abaixo:
-```
+2. With the container name at hand, execute the command `docker exec -it <container_name> bash`, replacing <container_name> with the name of the container for the "backend" service. Here's an example:
+   
+```bash
 docker exec -it task-manager-backend-1 bash 
 ```
 
-3. Isso permitirá que você entre no container do backend. Agora, execute o comando `php artisan migrate` para realizar as migrações do Laravel dentro do contêiner.
-```
+3. This will allow you to enter the backend container. Now, run the `php artisan migrate` command to perform the Laravel migrations inside the container.
+   
+```bash
 php artisan migrate
 ```
 
-## Uso
+## Usage
 
-1. Após iniciar os contêineres, abra o navegador e acesse [http://localhost:3000](http://localhost:3000).
+1. After starting the containers, open your browser and access [http://localhost:3000](http://localhost:3000).
 
-2. Na parte superior, no cabeçalho, haverá a opção de criar uma conta e fazer login.
+2. At the top, in the header, there will be an option to create an account and log in.
 
-3. Após criar uma conta, faça login com suas credenciais.
+3. After creating an account, log in with your credentials.
 
-4. Você será direcionado(a) para a página de gerenciamento de tarefas personalizada.
+4. You will be directed to the personalized task management page.
 
-5. Na página de gerenciamento de tarefas, você pode realizar as seguintes operações:
+5. On the task management page, you can perform the following operations:
 
-   - Criar uma nova tarefa: clique no botão "Nova Tarefa" e preencha as informações necessárias.
-   - Atualizar uma tarefa existente: selecione a tarefa desejada e faça as alterações necessárias.
-   - Marcar uma tarefa como concluída: clique na opção de conclusão ao lado da tarefa correspondente.
-   - Excluir uma tarefa: clique no botão de exclusão ao lado da tarefa correspondente.
+   - Create a new task: click on the "New Task" button and fill in the necessary information.
+   - Update an existing task: select the desired task and make the necessary changes.
+   - Mark a task as completed: click on the completion option next to the corresponding task.
+   - Delete a task: click on the deletion button next to the corresponding task.
 
-6. Todas as alterações nas tarefas são sincronizadas com o banco de dados MySQL.
+6. All changes to tasks are synchronized with the MySQL database.
 
-## Licença
+## License
 
-Este projeto foi criado por [Luiz Lima](https://github.com/luizgolima) e licenciado sob a [Licença MIT](LICENSE).
+This project was created by [Luiz Lima](https://github.com/luizgolima) and is licensed under the [Licença MIT](LICENSE).
 
 
